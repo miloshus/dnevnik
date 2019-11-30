@@ -35,9 +35,10 @@
 
                 <div class="form-group">
                     <select name="user_id" id="">
-                        @foreach($sections as $sec)
-                            <option value="{{$sec->id}}">{{$sec->user['name']}}</option>
+                        @foreach($section as $sec)
+                            <option value="{{$sec->user['id']}}">{{$sec->user['name']}}</option>
                         @endforeach
+
                     </select>
                 </div>
                 <div class="form-group">

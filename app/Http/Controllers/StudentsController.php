@@ -31,7 +31,7 @@ class StudentsController extends Controller
     {
 //        $students = Student::pluck('name')->all();
 //        return view('admin.students.create', compact('students'));
-        $section = Student::pluck('name', 'id')->all();
+        $section = Student::pluck('name', 'id', 'section_id')->all();
         return view('admin.students.create', compact('section'));
     }
 

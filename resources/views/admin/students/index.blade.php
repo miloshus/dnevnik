@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="form-group mb-5">
-                    <a href="{{route('admin.home')}}"><button type="button" class="btn btn-primary col-sm-2">Back</button></a>
+                    <a href="{{route('teacher.home')}}"><button type="button" class="btn btn-primary col-sm-2">Back</button></a>
                 </div>
                 <h2>Students</h2>
                 <table class="table table-striped">
@@ -21,7 +21,7 @@
                     @if($students)
                         @foreach ($students as $student)
                             <tr>
-                                <td>{{$student->name}}</td>
+                                <td><a href="{{route('students.edit', $student->id)}}">{{$student->name}}</a></td>
                                 <td>{{$student->section['title']}}</td>
                                 <td>{{$student->user['name']}}</td>
                                 <td>{{$student->created_at}}</td>

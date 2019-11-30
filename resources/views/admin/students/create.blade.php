@@ -14,8 +14,8 @@
                     {!! Form::text('name', null, ['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('title', 'Section:') !!}
-                    {!! Form::select('title', ['1'=> 'I-1','2'=> 'II-1','3'=> 'III-1','4'=> 'IV-1','5'=> 'V-1','6'=> 'VI-1','7'=> 'VII-1','8'=> 'VIII-1'] + $section, null, ['class'=>'form-control']) !!}
+                    {!! Form::label('section_id', 'Section:') !!}
+                    {!! Form::select('section_id', ['1'=> 'I-1','2'=> 'II-1','3'=> 'III-1','4'=> 'IV-1','5'=> 'V-1','6'=> 'VI-1','7'=> 'VII-1','8'=> 'VIII-1'] + $section, null, ['class'=>'form-control']) !!}
                 </div>
                 {{--<div class="form-group">--}}
                     {{--{!! Form::label('email', 'Email:') !!}--}}
@@ -42,9 +42,7 @@
                 {!! Form::close() !!}
 
                 @include('includes.errors')
-                <div class="form-group">
-                    <a href="{{route('admin.home')}}"><button type="button" class="btn btn-primary col-sm-2">Back</button></a>
-                </div>
+
             </div>
         </div>
     </div>

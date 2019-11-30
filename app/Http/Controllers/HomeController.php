@@ -30,4 +30,18 @@ class HomeController extends Controller
     public function teacher(){
         return view('teacher.home');
     }
+    public function professor()
+    {
+        return view('professor.home');
+    }
+    public function parent()
+    {
+        $user = Auth::user();
+        $students = $user->student;
+        return view('parent.home', compact('students'));
+    }
+    public function principal()
+    {
+        return view('principal.home');
+    }
 }

@@ -5,10 +5,9 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="form-group mb-5">
-                    <a href="{{route('admin.home')}}"><button type="button" class="btn btn-primary col-sm-2">Back</button></a>
+                    <a href="{{route('section.index')}}"><button type="button" class="btn btn-primary col-sm-2">Back</button></a>
                 </div>
                 <h1>Create Section</h1>
-
 
                 {!! Form::open(['method'=>'POST', 'action' => 'SectionController@store']) !!}
 
@@ -35,8 +34,8 @@
 
                 <div class="form-group">
                     <select name="user_id" id="">
-                        @foreach($section as $sec)
-                            <option value="{{$sec->user['id']}}">{{$sec->user['name']}}</option>
+                        @foreach($section as $sec=>$s)
+                             <option value="{{$sec}}">{{$s}}</option>
                         @endforeach
 
                     </select>

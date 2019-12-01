@@ -14,7 +14,7 @@
                         <th>Class</th>
                         <th>Title</th>
                         <th>Teacher</th>
-                        <th>Created at</th>
+                        <th>Students</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,7 +25,9 @@
                                 <td>{{$sec->is_lower_section}}</td>
                                 <td> <a href="{{route('students.index', $sec->id)}}">{{$sec->title}}</a></td>
                                 <td>{{$sec->user['name']}}</td>
-                                <td>{{$sec->created_at}}</td>
+                                <td><a href="{{route('teacher.section', $sec->id)}}" class="btn btn-primary">View Students</a></td>
+
+
                             </tr>
                         @endforeach
                     @endif

@@ -46,5 +46,8 @@ Route::resource('/admin/students', 'StudentsController');
 
 Route::get('/teacher/student/{student}', 'TeacherController@student')->name('teacher.student')->middleware('student');
 
+Route::get('/teacher/section/{id}', 'TeacherController@section')->name('teacher.section');
+
+
 
 

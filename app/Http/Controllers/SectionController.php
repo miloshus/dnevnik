@@ -25,8 +25,11 @@ class SectionController extends Controller
     public function create()
     {
         $sections = Section::all();
-        $section = Section::pluck('title','is_lower_section')->all();
+        $section = Section::pluck('title','is_lower_section','user_id')->all();
         return view('admin.section.create', compact('section', 'sections'));
+
+        $teachers = User::where('role_id', 2)->doesntHave('section')->pluck('name', 'id');
+        return view('admin.section.create', compact('teachers'));
     }
 
     public function store(SectionRequest $request)

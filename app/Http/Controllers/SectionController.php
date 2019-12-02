@@ -24,12 +24,12 @@ class SectionController extends Controller
 
     public function create()
     {
-        $sections = Section::all();
+//        $sections = Section::all();
         $section = Section::pluck('title','is_lower_section','user_id')->all();
-        return view('admin.section.create', compact('section', 'sections'));
+//        return view('admin.section.create', compact('section'));
 
-        $teachers = User::where('role_id', 2)->doesntHave('section')->pluck('name', 'id');
-        return view('admin.section.create', compact('teachers'));
+        $teachers = User::where('role_id', 2)->pluck('name', 'id');
+        return view('admin.section.create', compact('teachers' , 'section' ));
     }
 
     public function store(SectionRequest $request)

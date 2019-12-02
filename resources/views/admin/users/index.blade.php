@@ -36,6 +36,7 @@
                   @endif
                 </tbody>
               </table>
+            {{$users->links()}}
             <div class="form-group">
                 <a href="{{route('users.create')}}"><button type="button" class="btn btn-primary col-sm-2">Create User</button></a>
             </div>

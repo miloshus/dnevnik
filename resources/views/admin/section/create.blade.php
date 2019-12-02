@@ -34,8 +34,9 @@
 
                 <div class="form-group">
                     <select name="user_id" id="">
-                        @foreach($section as $sec=>$s)
-                             <option value="{{$sec}}">{{$s}}</option>
+
+                        @foreach($teachers as $teacher)
+                             <option value="user_id">{{$teacher}}</option>
                         @endforeach
 
                     </select>

@@ -3,7 +3,6 @@
 @section('content')
     <div class="container">
         <div class="form-group">
-
             <h1>Students</h1>
 
             <table class="table">

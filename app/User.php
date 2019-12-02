@@ -43,7 +43,7 @@ class User extends Authenticatable
 
     public function section()
     {
-        return $this->hasOne(Section::class);
+        return $this->belongsTo(Section::class);
     }
 
 }

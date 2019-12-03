@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -24,9 +25,11 @@
       <library name="PHP" type="php">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
         </SOURCES>
       </library>
     </orderEntry>

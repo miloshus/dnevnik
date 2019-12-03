@@ -23,7 +23,7 @@
                             <tr>
 
                                 <td>{{$sec->is_lower_section}}</td>
-                                <td> <a href="{{route('students.index', $sec->id)}}">{{$sec->title}}</a></td>
+                                <td> <a href="{{route('teacher.section', $sec->id)}}">{{$sec->title}}</a></td>
                                 <td>{{$sec->user['name']}}</td>
                                 <td><a href="{{route('teacher.section', $sec->id)}}" class="btn btn-primary">View Students</a></td>
 

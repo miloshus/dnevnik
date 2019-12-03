@@ -7,6 +7,7 @@ use App\Student;
 use App\Section;
 use App\Subject;
 use App\User;
+use App\Grade;
 
     class TeacherController extends Controller
     {
@@ -18,11 +19,12 @@ use App\User;
             return view('teacher.section', compact('students'));
         }
 
-//        public function student(Student $student)
-//        {
-//            $sections = Section::all();
-//            $grades = Grade::where('student_id', $student->id)->get()->groupBy('subject_id');
-//            return view('teacher.student', compact('grades', 'student', 'sections'));
-//        }
+        public function student(Student $student)
+        {
+            $student = Student::where('section_id', $section_id)->get();
+            $sections = Section::all();
+            $grades = Grade::where('student_id', $student->id)->get()->groupBy('subject_id');
+            return view('teacher.student', compact('grades', 'student', 'sections'));
+        }
 
     }

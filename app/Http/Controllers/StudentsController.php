@@ -60,7 +60,8 @@ class StudentsController extends Controller
      */
     public function show($id)
     {
-        //
+        $students = Student::all();
+        return redirect(route('teacher.student', compact('students'));
     }
 
     /**

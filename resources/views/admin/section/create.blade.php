@@ -36,7 +36,7 @@
                     <select name="user_id" id="">
 
                         @foreach($teachers as $teacher)
-                             <option value="user_id">{{$teacher}}</option>
+                             <option value='{{$teacher}}'>{{$teacher}}</option>
                         @endforeach
 
                     </select>

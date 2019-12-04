@@ -21,10 +21,10 @@ use App\Grade;
 
         public function student(Student $student)
         {
-            $student = Student::where('section_id', $section_id)->get();
+            $subject = Subject::all();
             $sections = Section::all();
             $grades = Grade::where('student_id', $student->id)->get()->groupBy('subject_id');
-            return view('teacher.student', compact('grades', 'student', 'sections'));
+            return view('teacher.student', compact('grades', 'student', 'sections', 'subject'));
         }
 
     }

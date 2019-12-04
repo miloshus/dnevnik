@@ -13,11 +13,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{--@foreach($students as $student)--}}
-                    {{--<tr>--}}
-                        {{--<td><a href="{{route('teacher.student',$student->id)}}">{{$student->name}}</a></td>--}}
-                    {{--</tr>--}}
-                {{--@endforeach--}}
+                @foreach($grades as $key => $grades_array)
+                    @php
+                        $subject=\App\Subject::find($key);
+                    @endphp
+
+                    <tr>
+                        <td>{{$subject->name}}</td>
+                            @foreach($grades_array as $grade)
+                               <td>  {{$grade->grade}} </td>
+                            @endforeach
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
 

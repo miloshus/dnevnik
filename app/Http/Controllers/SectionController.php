@@ -34,6 +34,7 @@ class SectionController extends Controller
 
     public function store(SectionRequest $request)
     {
+        $request->get('user_id');
         $input = $request->all();
 
         Section::create($input);
@@ -43,5 +44,12 @@ class SectionController extends Controller
         return redirect(route('section.index'));
 
 
+    }
+
+    public function destroy($id)
+    {
+        $student = Student::find($id);
+        $student->delete();
+        return redirect(route('teacher.section' ));
     }
 }

@@ -15,6 +15,11 @@
                 @foreach($students as $student)
                     <tr>
                         <td><a href="{{route('teacher.student',$student->id)}}">{{$student->name}}</a></td>
+                        <td>
+                            {!! Form::open(['method'=>'DELETE', 'action'=>['SectionController@destroy' , $student->id]]) !!}
+                            {!! Form::submit('Delete Student', ['class'=>'btn btn-danger col-sm-5']) !!}
+                            {!! Form::close() !!}
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

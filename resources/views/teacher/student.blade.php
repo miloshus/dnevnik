@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="form-group">
-            <h1>Student</h1>
+            <h1>Student - {{$student->name}}</h1>
 
             <table class="table">
                 <thead>

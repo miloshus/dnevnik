@@ -33,12 +33,10 @@
                 </div>
 
                 <div class="form-group">
-                    <select name="user_id" id="">
-
-                        @foreach($teachers as $teacher)
-                             <option value='{{$teacher}}'>{{$teacher}}</option>
+                    <select name="user_id" id="user_id">
+                        @foreach($teachers as $teacher=>$tea)
+                            <option value="{!! $teacher !!}">{!! $tea !!}</option>
                         @endforeach
-
                     </select>
                 </div>
                 <div class="form-group">

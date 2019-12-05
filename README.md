@@ -1,3 +1,3 @@
-# elektronski dnevnik - laravel
+# elektronski dnevnik _ laravel
 
 laravel

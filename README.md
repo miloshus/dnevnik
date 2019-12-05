@@ -1,3 +1,3 @@
-# dnevnik_master
+# elektronski dnevnik
 
-dsfsdgdgd
+laravel

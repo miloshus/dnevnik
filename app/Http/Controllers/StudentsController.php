@@ -29,10 +29,10 @@ class StudentsController extends Controller
      */
     public function create()
     {
-//        $students = Student::pluck('name')->all();
+        $students = Student::pluck('name','section_id')->all();
 //        return view('admin.students.create', compact('students'));
-        $section = Student::pluck('name', 'id', 'section_id')->all();
-        return view('admin.students.create', compact('section'));
+        $section = Student::pluck( 'section_id', 'name')->all();
+        return view('admin.students.create', compact('section', 'students'));
     }
 
     /**
@@ -60,8 +60,8 @@ class StudentsController extends Controller
      */
     public function show($id)
     {
-        $students = Student::all();
-        return redirect(route('teacher.student', compact('students'));
+//        $students = Student::all();
+//        return redirect(route('teacher.student', compact('students'));
     }
 
     /**

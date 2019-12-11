@@ -17,6 +17,14 @@
                     {!! Form::label('section_id', 'Section:') !!}
                     {!! Form::select('section_id', ['1'=> 'I-1','2'=> 'II-1','3'=> 'III-1','4'=> 'IV-1','5'=> 'V-1','6'=> 'VI-1','7'=> 'VII-1','8'=> 'VIII-1'] + $section, null, ['class'=>'form-control']) !!}
                 </div>
+                <div class="form-group">
+                    <select name="user_id" id="user_id">
+                        @foreach($students as $sec =>$s)
+
+                            <option value="{!! $sec !!}">{!! $s !!}</option>
+                        @endforeach
+                    </select>
+                </div>
                 {{--<div class="form-group">--}}
                     {{--{!! Form::label('email', 'Email:') !!}--}}
                     {{--{!! Form::email('email', null, ['class'=>'form-control']) !!}--}}
